@@ -1,0 +1,16 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "forge-std/=lib/forge-std/src/"
+]
+fs_permissions = [{ access = "read", path = "./.env" }]
+
+[dependencies]
+forge-std = "https://github.com/foundry-rs/forge-std"
+openzeppelin-contracts = "https://github.com/OpenZeppelin/openzeppelin-contracts"
+
+[rpc_endpoints]
+base_sepolia = "${BASE_SEPOLIA_RPC_URL}"
